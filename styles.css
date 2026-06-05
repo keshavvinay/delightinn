@@ -1141,7 +1141,7 @@ ul {
         padding: 80px 30px 30px;
         box-shadow: var(--shadow-lg);
         transition: var(--transition);
-        z-index: 998;
+        z-index: 10000;
     }
     
     .nav.active {
@@ -1163,7 +1163,7 @@ ul {
     
     .mobile-menu-btn {
         display: flex;
-        z-index: 999;
+        z-index: 10001;
     }
     
     .mobile-menu-btn.active span:nth-child(1) {
