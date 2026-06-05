@@ -65,7 +65,7 @@
             "streetAddress": "New Hafeezpet",
             "addressLocality": "Kondapur",
             "addressRegion": "Telangana",
-            "postalCode": "500084",
+            "postalCode": "500049",
             "addressCountry": "IN"
         },
         "geo": {
@@ -572,7 +572,7 @@
                         <div class="contact-icon">&#128205;</div>
                         <div>
                             <h4>Address</h4>
-                            <p>New Hafeezpet, Kondapur,<br>Hyderabad, Telangana 500084</p>
+                            <p>New Hafeezpet, Kondapur,<br>Hyderabad, Telangana 500049</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -713,9 +713,9 @@
                 </div>
                 <div class="footer-contact">
                     <h4>Contact Info</h4>
-                    <p>New Hafeezpet, Kondapur,<br>Hyderabad, Telangana 500084</p>
-                    <p>Phone: +91-XXXXXXXXXX</p>
-                    <p>WhatsApp: +91-XXXXXXXXXX</p>
+                    <p>New Hafeezpet, Kondapur,<br>Hyderabad, Telangana 500049</p>
+                    <p>Phone: +91-9948311666</p>
+                    <p>WhatsApp: +91-9948311666</p>
                     <div class="footer-social">
                         <a href="#" aria-label="Instagram">IG</a>
                         <a href="#" aria-label="Facebook">FB</a>
@@ -748,10 +748,13 @@
     <script src="script.js"></script>
     <script>
     document.getElementById('callBtn').addEventListener('click', function() {
-        var count = parseInt(localStorage.getItem('call_clicks') || '0') + 1;
-        localStorage.setItem('call_clicks', count);
         if (typeof gtag === 'function') {
             gtag('event', 'call_click', {event_category: 'engagement', event_label: 'floating_call_button'});
+        }
+    });
+    document.querySelector('.whatsapp-float').addEventListener('click', function() {
+        if (typeof gtag === 'function') {
+            gtag('event', 'whatsapp_click', {event_category: 'engagement', event_label: 'floating_whatsapp_button'});
         }
     });
     </script>
