@@ -1281,3 +1281,42 @@ ul {
         grid-column: span 1;
     }
 }
+
+/* Floating Call Button */
+.floating-call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: #fff;
+    padding: 14px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.floating-call-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.call-icon {
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .floating-call-btn .call-text {
+        display: none;
+    }
+    .floating-call-btn {
+        padding: 16px;
+        border-radius: 50%;
+    }
+}

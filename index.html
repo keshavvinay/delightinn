@@ -648,7 +648,7 @@
                 <div class="faq-item">
                     <button class="faq-question">Do you offer PG accommodation in Kondapur?</button>
                     <div class="faq-answer">
-                        <p>Yes, we offer paying guest (PG) accommodation on select floors for working professionals. PG stays include meals, WiFi, AC, security, and daily housekeeping. Monthly rates start from &#8377;8,000.</p>
+                        <p>Yes, we offer paying guest (PG) accommodation on select floors for working professionals. PG stays include meals, WiFi, AC, security, and daily housekeeping. Monthly rates start from &#8377;10,000.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -729,7 +729,22 @@
         &#128172; WhatsApp
     </a>
 
+    <!-- Floating Call Button -->
+    <a href="tel:+919948311666" class="floating-call-btn" id="callBtn" aria-label="Call Now">
+        <span class="call-icon">&#9742;</span>
+        <span class="call-text">Call Now</span>
+    </a>
+
     <!-- Scripts -->
     <script src="script.js"></script>
+    <script>
+    document.getElementById('callBtn').addEventListener('click', function() {
+        var count = parseInt(localStorage.getItem('call_clicks') || '0') + 1;
+        localStorage.setItem('call_clicks', count);
+        if (typeof gtag === 'function') {
+            gtag('event', 'call_click', {event_category: 'engagement', event_label: 'floating_call_button'});
+        }
+    });
+    </script>
 </body>
 </html>
