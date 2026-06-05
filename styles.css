@@ -1318,12 +1318,16 @@ ul {
         bottom: 0;
         border-radius: 0;
         padding: 16px 0;
+        height: 56px;
         width: 50%;
         justify-content: center;
         text-align: center;
         font-size: 0.9rem;
         box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
         animation: none;
+        display: flex;
+        align-items: center;
+        gap: 6px;
     }
     .floating-call-btn {
         left: 0;
@@ -1332,11 +1336,5 @@ ul {
     .whatsapp-float {
         right: 0;
         left: auto;
-    }
-    .floating-call-btn .call-text,
-    .whatsapp-float {
-        display: flex;
-        align-items: center;
-        gap: 6px;
     }
 }
