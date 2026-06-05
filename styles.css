@@ -5,20 +5,20 @@
 
 /* CSS Variables */
 :root {
-    --primary: #1a5276;
-    --primary-light: #2980b9;
-    --primary-dark: #0e2f44;
-    --accent: #e74c3c;
-    --accent-light: #ff6b6b;
-    --gold: #f39c12;
-    --text: #2c3e50;
-    --text-light: #7f8c8d;
+    --primary: #07332c;
+    --primary-light: #485b46;
+    --primary-dark: #052822;
+    --accent: #bca879;
+    --accent-light: #d4c49a;
+    --gold: #bca879;
+    --text: #07332c;
+    --text-light: #485b46;
     --white: #ffffff;
-    --off-white: #f8f9fa;
-    --light-gray: #ecf0f1;
-    --border: #dfe6e9;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
-    --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.12);
+    --off-white: #ededed;
+    --light-gray: #ededed;
+    --border: #afb7ac;
+    --shadow: 0 4px 6px rgba(7, 51, 44, 0.07);
+    --shadow-lg: 0 10px 40px rgba(7, 51, 44, 0.12);
     --radius: 12px;
     --radius-sm: 8px;
     --transition: all 0.3s ease;
@@ -91,7 +91,7 @@ ul {
 }
 
 .highlight {
-    color: var(--primary);
+    color: var(--gold);
 }
 
 /* Buttons */
@@ -259,7 +259,7 @@ ul {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 56, 92, 0.75), rgba(34, 34, 34, 0.8));
+    background: linear-gradient(135deg, rgba(7, 51, 44, 0.85), rgba(72, 91, 70, 0.8));
 }
 
 .hero-content {
@@ -913,7 +913,7 @@ ul {
 .form-group textarea:focus {
     outline: none;
     border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.1);
+    box-shadow: 0 0 0 3px rgba(7, 51, 44, 0.1);
 }
 
 .form-group textarea {
