@@ -251,7 +251,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('https://cf.bstatic.com/xdata/images/hotel/max1920x1080/856064159.jpg?k=647127cd40caa1a931e3aaa799daf3c19cd252739a030a8e4c28615d55ebaa6b&o=') center/cover no-repeat;
+    background: url('images/856064159-1920x1080.jpg') center/cover no-repeat;
     text-align: center;
     color: var(--white);
 }
@@ -259,7 +259,7 @@ ul {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(26, 82, 118, 0.85), rgba(14, 47, 68, 0.9));
+    background: linear-gradient(135deg, rgba(255, 56, 92, 0.75), rgba(34, 34, 34, 0.8));
 }
 
 .hero-content {
