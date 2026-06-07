@@ -830,6 +830,7 @@
     <script>
     document.getElementById('callBtn').addEventListener('click', function() {
         if (typeof gtag === 'function') {
+            gtag('event', 'conversion', {send_to: 'AW-11506707477/click_call', value: 1.0, currency: 'INR'});
             gtag('event', 'call_click', {event_category: 'engagement', event_label: 'floating_call_button'});
         }
     });
