@@ -828,17 +828,32 @@
     <!-- Scripts -->
     <script src="script.js"></script>
     <script>
-    document.getElementById('callBtn').addEventListener('click', function() {
-        if (typeof gtag === 'function') {
-            gtag('event', 'conversion', {send_to: 'AW-11506707477/click_call', value: 1.0, currency: 'INR'});
-            gtag('event', 'call_click', {event_category: 'engagement', event_label: 'floating_call_button'});
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
         }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-11506707477/cYEqCLq02rocEJXY6e4q',
+          'value': 1.0,
+          'currency': 'INR',
+          'event_callback': callback
+      });
+      return false;
+    }
+
+    document.getElementById('callBtn').addEventListener('click', function() {
+        gtag_report_conversion('tel:+919948311666');
+        gtag('event', 'call_click', {event_category: 'engagement', event_label: 'floating_call_button'});
     });
+
     document.querySelector('.whatsapp-float').addEventListener('click', function() {
         if (typeof gtag === 'function') {
             gtag('event', 'whatsapp_click', {event_category: 'engagement', event_label: 'floating_whatsapp_button'});
         }
     });
+
     document.getElementById('contactForm').addEventListener('submit', function(e) {
         e.preventDefault();
         var f = this;
@@ -848,9 +863,8 @@
             + 'Email: ' + (f.email.value || 'N/A') + '%0A'
             + 'Stay Type: ' + f.stay_type.value + '%0A'
             + 'Message: ' + (f.message.value || 'N/A');
-        if (typeof gtag === 'function') {
-            gtag('event', 'form_submit', {event_category: 'engagement', event_label: 'enquiry_form'});
-        }
+        gtag_report_conversion();
+        gtag('event', 'form_submit', {event_category: 'engagement', event_label: 'enquiry_form'});
         window.open('https://wa.me/919948311666?text=' + msg, '_blank');
         f.reset();
     });
