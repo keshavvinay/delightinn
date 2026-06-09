@@ -287,6 +287,33 @@ ul {
     opacity: 0.95;
 }
 
+.hero-rating {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    opacity: 0.95;
+}
+
+.hero-price {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.btn-call {
+    background: #25d366;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.btn-call:hover {
+    background: #1ebe57;
+}
+
 .hero-description {
     font-size: 1.05rem;
     margin-bottom: 30px;
