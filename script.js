@@ -68,3 +68,18 @@ function gtag_report_conversion(url) {
   });
   return false;
 }
+
+/* Contact form → WhatsApp */
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var f = this;
+  var msg = 'New Enquiry from Website:%0A'
+    + 'Name: ' + f.name.value + '%0A'
+    + 'Phone: ' + f.phone.value + '%0A'
+    + 'Email: ' + (f.email.value || 'N/A') + '%0A'
+    + 'Stay Type: ' + f.stay_type.value + '%0A'
+    + 'Message: ' + (f.message.value || 'N/A');
+  gtag_report_conversion();
+  window.open('https://wa.me/919948311666?text=' + msg, '_blank');
+  f.reset();
+});
