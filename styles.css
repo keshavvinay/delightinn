@@ -1213,6 +1213,21 @@ ul {
     .hero-subtitle {
         font-size: 1.1rem;
     }
+
+    .hero-rating {
+        font-size: 0.85rem;
+        margin-bottom: 4px;
+    }
+
+    .hero-price {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .btn-call {
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
     
     .hero-badges {
         flex-direction: column;
@@ -1285,7 +1300,20 @@ ul {
     .hero-content h1 {
         font-size: 1.8rem;
     }
-    
+
+    .hero-rating {
+        font-size: 0.8rem;
+    }
+
+    .hero-price {
+        font-size: 0.9rem;
+    }
+
+    .btn-call {
+        font-size: 0.85rem;
+        padding: 9px 16px;
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
