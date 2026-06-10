@@ -60,12 +60,18 @@ function gtag_report_conversion(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') { window.location = url; }
   };
-  gtag('event', 'conversion', {
-    'send_to': 'AW-11506707477/cYEqCLq02rocEJXY6e4q',
-    'value': 1.0,
-    'currency': 'INR',
-    'event_callback': callback
-  });
+  if (typeof gtag === 'function') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-11506707477/cYEqCLq02rocEJXY6e4q',
+      'value': 1.0,
+      'currency': 'INR',
+      'event_callback': callback
+    });
+  } else {
+    callback();
+  }
+  // Fallback: navigate after 1s even if gtag doesn't respond
+  setTimeout(callback, 1000);
   return false;
 }
 
