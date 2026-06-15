@@ -86,6 +86,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     + 'Stay Type: ' + f.stay_type.value + '%0A'
     + 'Message: ' + (f.message.value || 'N/A');
   gtag_report_conversion();
+  gtag('event', 'whatsapp_click', { 'event_label': 'contact_form' });
   window.open('https://wa.me/919948311666?text=' + msg, '_blank');
   f.reset();
 });
